@@ -42,6 +42,8 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 ## Notes
 
 Describe any challenges encountered while building the app.
+My tableview was showing a bunch of cells so each cell was very short and didn't show much content.
+I had to explicitly code the height of each cell.
 
 ## License
 
