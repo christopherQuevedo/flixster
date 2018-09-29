@@ -18,9 +18,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7kc-gx-n4B">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" sectionIndexMinimumDisplayRowCount="1" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7kc-gx-n4B">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="200" id="xRG-1b-dA8" customClass="MovieCell" customModule="flixster" customModuleProvider="target">
@@ -30,27 +29,42 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2a-Br-Erh">
-                                                    <rect key="frame" x="7" y="10" width="100" height="179"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T2a-Br-Erh">
+                                                    <rect key="frame" x="8" y="8" width="100" height="179"/>
                                                     <color key="backgroundColor" red="0.27291832220000001" green="1" blue="0.26983058469999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <color key="tintColor" red="0.2729183221806557" green="1" blue="0.26983058469356314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="JIz-BP-1Z1"/>
+                                                        <constraint firstAttribute="height" constant="179" id="Nxi-Sc-nKb"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ5-Kc-t6d">
-                                                    <rect key="frame" x="115" y="11" width="245" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wonder Woman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQ5-Kc-t6d">
+                                                    <rect key="frame" x="116" y="8" width="146" height="25.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CN-oZ-Yri">
-                                                    <rect key="frame" x="115" y="40" width="235" height="149"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4CN-oZ-Yri">
+                                                    <rect key="frame" x="116" y="41.5" width="88" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eQ5-Kc-t6d" firstAttribute="top" secondItem="Nga-k5-Xf6" secondAttribute="top" constant="8" id="1qr-QQ-h5n"/>
+                                                <constraint firstItem="4CN-oZ-Yri" firstAttribute="leading" secondItem="T2a-Br-Erh" secondAttribute="trailing" constant="8" id="2e4-Gu-Zel"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="T2a-Br-Erh" secondAttribute="bottom" constant="8" id="6X3-x3-5dg"/>
+                                                <constraint firstItem="T2a-Br-Erh" firstAttribute="leading" secondItem="Nga-k5-Xf6" secondAttribute="leading" constant="8" id="C5p-H1-Bmc"/>
+                                                <constraint firstItem="T2a-Br-Erh" firstAttribute="top" secondItem="Nga-k5-Xf6" secondAttribute="top" constant="8" id="HrS-zs-uvl"/>
+                                                <constraint firstItem="4CN-oZ-Yri" firstAttribute="top" secondItem="eQ5-Kc-t6d" secondAttribute="bottom" constant="8" id="M4h-No-cQZ"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4CN-oZ-Yri" secondAttribute="trailing" constant="8" id="UpB-Dy-Fqf"/>
+                                                <constraint firstItem="eQ5-Kc-t6d" firstAttribute="top" secondItem="T2a-Br-Erh" secondAttribute="top" id="hbV-yp-6tm"/>
+                                                <constraint firstItem="eQ5-Kc-t6d" firstAttribute="leading" secondItem="T2a-Br-Erh" secondAttribute="trailing" constant="8" id="iOL-Yk-jCg"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="eQ5-Kc-t6d" secondAttribute="trailing" constant="8" id="nZ3-f6-sFX"/>
+                                                <constraint firstItem="4CN-oZ-Yri" firstAttribute="leading" secondItem="eQ5-Kc-t6d" secondAttribute="leading" id="nqp-tb-8DG"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="4CN-oZ-Yri" secondAttribute="bottom" constant="8" id="wgr-9s-KJP"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="overviewLabel" destination="4CN-oZ-Yri" id="tEQ-d5-H5K"/>
@@ -63,6 +77,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="7kc-gx-n4B" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="84p-IF-lo4"/>
+                            <constraint firstItem="7kc-gx-n4B" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LTn-5F-tr4"/>
+                            <constraint firstItem="7kc-gx-n4B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="PsK-Zb-Eqb"/>
+                            <constraint firstAttribute="bottom" secondItem="7kc-gx-n4B" secondAttribute="bottom" id="mgR-4A-6jE"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Movies" id="W8B-Yk-xsa"/>
@@ -152,6 +172,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Abf-ye-99I" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5sH-X1-Ors">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
