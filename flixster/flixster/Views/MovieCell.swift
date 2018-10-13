@@ -12,6 +12,16 @@ class MovieCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var overviewLabel: UILabel!
     @IBOutlet weak var posterImageView: UIImageView!
+    var movie: Movie! {
+        didSet{
+            let title = movie.title as! String
+            let overview = movie.overview as! String
+            self.titleLabel.text = title
+            self.overviewLabel.text = overview
+            let posterURL = movie.posterUrl
+            self.posterImageView.af_setImage(withURL: posterURL!)
+        }
+    }
     
     override func awakeFromNib() {
         super.awakeFromNib()
